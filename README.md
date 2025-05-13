@@ -28,25 +28,24 @@ API ini dibangun menggunakan Python, FastAPI, dan TensorFlow, dan dapat dideploy
 ```
 crypto-price-prediction/
 │
-├── app/
-│   ├── __init__.py
-│   ├── main.py              # FastAPI app dan endpoint prediksi
-│   ├── data.py              # Pengambilan dan preprocessing data dari CoinGecko API
-│   ├── model.py             # Definisi dan training model LSTM
-│   ├── utils.py             # Fungsi utilitas seperti plotting
-│   └── config.py            # Konfigurasi API dan parameter model
-│
-├── models/
-│   ├── bitcoin_model.h5
-│   ├── ethereum_model.h5
-│   ├── binancecoin_model.h5
-│   ├── ripple_model.h5
-│   ├── solana_model.h5
-│   └── config.py            # Konfigurasi model dan path
-│
-├── requirements.txt         # Daftar dependencies Python
-├── README.md                # Dokumentasi proyek ini
-└── .gitignore               # File dan folder yang diabaikan Git
+app/
+ main.py              # FastAPI app dan endpoint prediksi
+ data.py              # Pengambilan dan preprocessing data dari CoinGecko API
+ model.py             # Definisi dan training model LSTM
+ utils.py             # Fungsi utilitas seperti plotting
+ config.py            # Konfigurasi API dan parameter model
+
+models/
+ bitcoin_model.h5
+ ethereum_model.h5
+ binancecoin_model.h5
+ ripple_model.h5
+ solana_model.h5
+ config.py            # Konfigurasi model dan path
+
+ requirements.txt         # Daftar dependencies Python
+ README.md                # Dokumentasi proyek ini
+ .gitignore               # File dan folder yang diabaikan Git
 ```
 
 ---
