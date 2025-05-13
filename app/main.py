@@ -8,6 +8,11 @@ from app.config import COINS, WINDOW_SIZE, PRED_DAYS
 import numpy as np
 import os
 
+# Import tambahan untuk load model dengan custom_objects dan load scaler
+from tensorflow.keras.models import load_model
+from tensorflow.keras.losses import mse  # Import fungsi mse untuk custom_objects
+import joblib  # Untuk load scaler, sesuaikan dengan cara Anda menyimpan scaler
+
 app = FastAPI()
 
 models = {}
@@ -24,19 +29,23 @@ def train_and_save_model(coin_id):
     model.fit(X, y, epochs=50, batch_size=16, verbose=0)
     model_path = os.path.join(MODEL_DIR, f"{coin_id}_model.h5")
     model.save(model_path)
+    # Simpan scaler secara terpisah menggunakan joblib
+    scaler_path = os.path.join(MODEL_DIR, f"{coin_id}_scaler.save")
+    joblib.dump(scaler, scaler_path)
     return model, scaler
 
 def load_model_and_scaler(coin_id):
-    from tensorflow.keras.models import load_model
     model_path = os.path.join(MODEL_DIR, f"{coin_id}_model.h5")
-    if os.path.exists(model_path):
-        model = load_model(model_path)
-        # scaler harus disimpan secara terpisah jika ingin persist, tapi untuk demo kita retrain
-        # Jadi kita retrain saja untuk scaler
-        df = get_ohlc_data(coin_id)
-        _, _, scaler = prepare_data(df)
+    scaler_path = os.path.join(MODEL_DIR, f"{coin_id}_scaler.save")
+
+    if os.path.exists(model_path) and os.path.exists(scaler_path):
+        # Load model dengan custom_objects untuk mse agar tidak error saat load
+        model = load_model(model_path, custom_objects={'mse': mse})
+        # Load scaler menggunakan joblib
+        scaler = joblib.load(scaler_path)
         return model, scaler
     else:
+        # Jika model atau scaler belum ada, lakukan training dan simpan
         return train_and_save_model(coin_id)
 
 @app.on_event("startup")
