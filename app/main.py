@@ -13,7 +13,18 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.losses import mse  # Import fungsi mse untuk custom_objects
 import joblib  # Untuk load scaler, sesuaikan dengan cara Anda menyimpan scaler
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
+
+# Tambahkan middleware CORS agar frontend React bisa mengakses API tanpa masalah CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Ganti "*" dengan domain frontend Anda, misal ["http://localhost:3000"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 models = {}
 scalers = {}
