@@ -89,11 +89,8 @@ def predict(coin_name: str):
 
     historical_close = df['close'].values
 
-    img_base64 = plot_prediction(historical_close, pred, coin_name)
-
     return {
         "predicted_close_price": pred.tolist(),
-        "plot_base64": img_base64
     }
 
 if __name__ == "__main__":
