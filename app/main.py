@@ -3,7 +3,6 @@ from fastapi import FastAPI, HTTPException
 import uvicorn
 from app.data import get_ohlc_data
 from app.model import prepare_data, build_lstm_model
-from app.utils import plot_prediction
 from app.config import COINS, WINDOW_SIZE, PRED_DAYS
 import numpy as np
 import os
