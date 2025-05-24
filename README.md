@@ -144,10 +144,3 @@ Untuk pertanyaan atau bantuan, silakan hubungi:
 
 - Email: haffiyanputra@gmail.com
 - GitHub: [https://github.com/HafiyahPutra](https://github.com/HafiyahPutra)
-
-
-```
-
----
-
-Jika Anda ingin saya buatkan versi README yang lebih singkat, lebih teknis, atau dengan tambahan bagian lain, silakan beritahu saya! 😊
