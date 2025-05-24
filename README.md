@@ -9,7 +9,9 @@ API menggunakan FastAPI dan Render.
 ```markdown
 # Crypto Price Prediction API
 
-Proyek ini adalah aplikasi API untuk memprediksi harga cryptocurrency (BTC, ETH, BNB, XRP, SOLANA) 7 hari ke depan menggunakan model LSTM berbasis data OHLC (Open, High, Low, Close) selama 30 hari terakhir. Data diambil secara real-time dari CoinGecko API.
+Proyek ini adalah aplikasi API untuk memprediksi harga cryptocurrency (BTC, ETH, BNB, XRP, SOLANA) 
+7 hari ke depan menggunakan model LSTM berbasis data OHLC (Open, High, Low, Close) selama 30 hari terakhir. 
+Data diambil secara real-time dari CoinGecko API.
 
 API ini dibangun menggunakan Python, FastAPI, dan TensorFlow, dan dapat dideploy dengan mudah di platform Render.
 
@@ -92,7 +94,8 @@ API akan berjalan di `http://127.0.0.1:8000`.
 
 ## Penjelasan Metode
 
-Model menggunakan **Long Short-Term Memory (LSTM)**, jenis Recurrent Neural Network (RNN) yang sangat efektif untuk data deret waktu seperti harga cryptocurrency.
+Model menggunakan **Long Short-Term Memory (LSTM)**, jenis Recurrent Neural Network (RNN) yang sangat efektif 
+untuk data deret waktu seperti harga cryptocurrency.
 
 ### Kelebihan LSTM
 
