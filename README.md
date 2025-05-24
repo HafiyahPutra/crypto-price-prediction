@@ -145,9 +145,7 @@ Untuk pertanyaan atau bantuan, silakan hubungi:
 - Email: haffiyanputra@gmail.com
 - GitHub: [https://github.com/HafiyahPutra](https://github.com/HafiyahPutra)
 
----
 
-Semoga proyek ini bermanfaat dan membantu Anda dalam memprediksi harga cryptocurrency! 🚀📈
 ```
 
 ---
