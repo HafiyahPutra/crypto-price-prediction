@@ -1,4 +1,6 @@
-Tentu! Berikut adalah contoh file README.md yang lengkap dan terstruktur untuk proyek AI prediksi harga cryptocurrency Anda menggunakan LSTM, dengan data OHLC dari CoinGecko API, serta deployment API menggunakan FastAPI dan Render.
+Tentu! Berikut adalah contoh file README.md yang lengkap dan terstruktur untuk proyek AI prediksi 
+harga cryptocurrency Anda menggunakan LSTM, dengan data OHLC dari CoinGecko API, serta deployment 
+API menggunakan FastAPI dan Render.
 
 ---
 
