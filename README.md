@@ -140,6 +140,5 @@ Jika Anda ingin berkontribusi, silakan buat pull request atau buka issue.
 ## Kontak
 
 - GitHub: [https://github.com/HafiyahPutra](https://github.com/HafiyahPutra)
-- GitHub: [(https://github.com/Raihan9102)](https://github.com/Raihan9102)
-- GitHub: [(https://github.com/rifada19)](https://github.com/rifada19)
+
 ---
